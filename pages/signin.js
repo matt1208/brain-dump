@@ -1,3 +1,4 @@
+import NavBar from '@/components/NavBar';
 import { SunIcon } from '@chakra-ui/icons';
 import { Box, Button, Center, extendTheme, Flex, Heading, HStack, IconButton, Image, Link, Stack, Text, useColorMode, useColorModeValue } from '@chakra-ui/react'
 import Head from 'next/head'
@@ -20,31 +21,7 @@ export default function Home() {
             </Head>
 
             <Flex flexDirection="column">
-                <Flex
-                    alignItems="center"
-                    justifyContent="space-between"
-                    py={4}
-                    px={8}
-                >
-                    <Stack
-                        isInline
-                        spacing={4}
-                        alignItems="stretch"
-                    >
-                        {/* <HStack>
-              <Heading color={color}>Brain</Heading>
-              <Heading color={pcolor}>DUMP</Heading>
-            </HStack> */}
-                        <Link href="/" >
-                            <Image src="brain.svg" boxSize="60px" />
-                        </Link>
-                    </Stack>
-                    <Flex alignItems="center">
-                        <IconButton aria-label="Search database" icon={<SunIcon />} bg={btnbg} size="lg" onClick={toggleColorMode}>
-                            Theme
-            </IconButton>
-                    </Flex>
-                </Flex>
+                <NavBar />
             </Flex>
 
             <Flex

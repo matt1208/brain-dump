@@ -1,6 +1,8 @@
 import LandingGrpahic from '@/components/LandingGraphic';
+import LandingHeader from '@/components/LandingHeader';
 import NavBar from '@/components/NavBar';
 import VLandingGraphic from '@/components/VLandingGraphic';
+import VLandingHeader from '@/components/VLandingHeader';
 import { SunIcon } from '@chakra-ui/icons';
 import { Box, Button, Center, Circle, Container, Flex, Heading, HStack, IconButton, Image, Link, SimpleGrid, Stack, Text, useColorMode, useColorModeValue, useMediaQuery, VStack } from '@chakra-ui/react'
 import Head from 'next/head'
@@ -14,6 +16,8 @@ export default function Home() {
   const btnbg = useColorModeValue("cyan.300", "cyan.400");
   const boxbg = useColorModeValue("gray.200", "gray.700");
   const [isLargerThan1100] = useMediaQuery("(max-width: 1100px)");
+  const [isLargerThan900] = useMediaQuery("(max-width: 900px)");
+
 
 
   //Button background color is switched in designs 
@@ -31,20 +35,12 @@ export default function Home() {
 
       <Container maxW="1200px" ml="auto" mr="auto" py={8} >
 
-        <SimpleGrid columns={[1, null, 2]} spacing={40} ml={20} mr={20}>
-
-          <Box borderLeft="3px solid" borderColor={btnbg} pl={4}>
-            <HStack pt={6}>
-              <Heading size="4xl" color={color}>Brain</Heading>
-              <Heading size="4xl" color={pcolor}>DUMP</Heading>
-            </HStack>
-            <Text fontSize="xl" pt="4" fontWeight="bold">A place to quickly store your random thoughts, ideas, and more. Sign in and write down your thoughts so you can remember them later.</Text>
-            <Link href="/signin" _hover={{ textDecoration: "none" }}><Button mt="6" backgroundColor={btnbg} size="lg" width="175px" height="50px" _hover={{ bg: "#A0AEC0" }} >Get Started</Button></Link>
-          </Box>
-
-          <Image src="brain.svg" boxSize="400px" />
-
-        </SimpleGrid>
+        {isLargerThan900 ? (
+          <VLandingHeader />
+        ) : (
+            <LandingHeader />
+          )
+        }
 
         <br></br>
         <br></br>

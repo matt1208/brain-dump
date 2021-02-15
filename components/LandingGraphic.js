@@ -13,24 +13,24 @@ const LandingGrpahic = () => {
                 <Circle size="250px" bg={boxbg}>
                     <Image src="GlowBrain.svg"></Image>
                 </Circle>
-                <Heading fontSize="xl" letterSpacing={1}>Text</Heading>
-                <Text>Description</Text>
+                <Heading pt={2} color={color} fontSize="xl" letterSpacing={1} textAlign="center">Have An Imporant Thought?</Heading>
+                <Text color={color} textAlign="center">Need to store something you were just thinking? BrainDUMP can successfully store all your thoughts.</Text>
             </VStack>
 
             <VStack>
                 <Circle size="250px" bg={boxbg}>
                     <Image src="Paper.svg" boxSize="180px"></Image>
                 </Circle>
-                <Heading fontSize="xl" letterSpacing={1}>Text</Heading>
-                <Text>Description</Text>
+                <Heading pt={2} color={color} fontSize="xl" letterSpacing={1}>Write it Down</Heading>
+                <Text color={color} textAlign="center">Use BrainDUMP to write down whatever you need. Just sign in and create a new thought card to reference later.</Text>
             </VStack>
 
             <VStack>
                 <Circle size="250px" bg={boxbg}>
                     <Image src="Confetti.svg" pt={4} pr={6}></Image>
                 </Circle>
-                <Heading fontSize="xl" letterSpacing={1}>Text</Heading>
-                <Text>Description</Text>
+                <Heading pt={2} color={color} fontSize="xl" letterSpacing={1}>All Done!</Heading>
+                <Text color={color} textAlign="center">Now that you have stored your thought, you can come back at any time to reference or remember what you were thinking.</Text>
             </VStack>
         </SimpleGrid>
     )

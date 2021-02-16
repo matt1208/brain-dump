@@ -16,7 +16,7 @@ export default function Home() {
   const btnbg = useColorModeValue("cyan.300", "cyan.400");
   const boxbg = useColorModeValue("gray.200", "gray.700");
   const [isLargerThan1100] = useMediaQuery("(max-width: 1100px)");
-  const [isLargerThan900] = useMediaQuery("(max-width: 900px)");
+  const [isLargerThan950] = useMediaQuery("(max-width: 950px)");
 
 
 
@@ -35,7 +35,7 @@ export default function Home() {
 
       <Container maxW="1200px" ml="auto" mr="auto" py={8} >
 
-        {isLargerThan900 ? (
+        {isLargerThan950 ? (
           <VLandingHeader />
         ) : (
             <LandingHeader />

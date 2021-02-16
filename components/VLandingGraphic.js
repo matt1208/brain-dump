@@ -12,7 +12,7 @@ const VLandingGraphic = () => {
             <SimpleGrid columns={[1, null, 3]} spacing={10} ml={20} mr={20} mt={10}>
                 <VStack>
                     <Circle size="250px" bg={boxbg}>
-                        <Image src="GlowBrain.svg"></Image>
+                        <Image src="GlowBrain.svg" alt="Glowing Brain"></Image>
                     </Circle>
                     <Heading pt={2} color={color} fontSize="xl" letterSpacing={1} textAlign="center">Have An Imporant Thought?</Heading>
                     <Text color={color} textAlign="center">Need to store something you were just thinking? BrainDUMP can successfully store all your thoughts.</Text>
@@ -20,7 +20,7 @@ const VLandingGraphic = () => {
 
                 <VStack>
                     <Circle size="250px" bg={boxbg}>
-                        <Image src="Paper.svg" boxSize="180px"></Image>
+                        <Image src="Paper.svg" alt="Paper" boxSize="180px"></Image>
                     </Circle>
                     <Heading pt={2} color={color} fontSize="xl" letterSpacing={1}>Write it Down</Heading>
                     <Text color={color} textAlign="center">Use BrainDUMP to write down whatever you need. Just sign in and create a new thought card to reference later.</Text>
@@ -28,7 +28,7 @@ const VLandingGraphic = () => {
 
                 <VStack>
                     <Circle size="250px" bg={boxbg}>
-                        <Image src="Confetti.svg" pt={4} pr={6}></Image>
+                        <Image src="Confetti.svg" alt="Celebration Graphic" pt={4} pr={6}></Image>
                     </Circle>
                     <Heading pt={2} color={color} fontSize="xl" letterSpacing={1}>All Done!</Heading>
                     <Text color={color} textAlign="center">Now that you have stored your thought, you can come back at any time to reference or remember what you were thinking.</Text>

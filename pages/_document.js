@@ -8,7 +8,7 @@ class MyDocument extends Document {
         return (
             <Html>
                 <Head>
-                    <link rel="icon" href="/favicon.ico" />
+                    <link rel="icon" href="/brain.svg" />
                 </Head>
                 <body>
                     <ColorModeScript initialColorMode={theme.config.initialColorMode} />

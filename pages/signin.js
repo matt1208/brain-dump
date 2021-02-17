@@ -1,4 +1,5 @@
 import NavBar from '@/components/NavBar';
+import { useAuth } from '@/lib/auth';
 import { SunIcon } from '@chakra-ui/icons';
 import { Box, Button, Center, extendTheme, Flex, Heading, HStack, IconButton, Image, Link, Stack, Text, useColorMode, useColorModeValue } from '@chakra-ui/react'
 import Head from 'next/head'
@@ -10,6 +11,7 @@ export default function Home() {
     const pcolor = useColorModeValue("pink.200", "pink.200");
     const btnbg = useColorModeValue("cyan.300", "cyan.400");
     const boxbg = useColorModeValue("gray.200", "gray.700");
+    const auth = useAuth();
 
     //Button background color is switched in designs 
 
@@ -44,7 +46,17 @@ export default function Home() {
                     </HStack>
 
                     <Center>
-                        <Button mt="6" backgroundColor={btnbg} size="lg" width="175px" height="50px" _hover={{ bg: "#A0AEC0" }} >Sign In with Github</Button>
+                        <Button
+                            onClick={(e) => auth.signinWithGithub()}
+                            mt="6"
+                            backgroundColor={btnbg}
+                            size="lg"
+                            width="175px"
+                            height="50px"
+                            _hover={{ bg: "#A0AEC0" }}
+                        >
+                            Sign In with Github
+                        </Button>
                     </Center>
                 </Box>
             </Flex>

@@ -1,6 +1,8 @@
 import { ChakraProvider, CSSReset, extendTheme } from '@chakra-ui/react';
 import { Global, css } from '@emotion/react';
 import { Fonts } from "@/styles/Fonts";
+import { AuthProvider } from '../lib/auth';
+
 
 
 const theme = extendTheme({
@@ -34,8 +36,10 @@ const GlobalStyle = ({ children }) => {
 function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider theme={theme}>
-      <Fonts />
-      <Component {...pageProps} />
+      <AuthProvider>
+        <Fonts />
+        <Component {...pageProps} />
+      </AuthProvider>
     </ChakraProvider>
   )
 }

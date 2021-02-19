@@ -1,6 +1,7 @@
+import DashHeader from '@/components/DashHeader';
 import NavBar from '@/components/NavBar';
 import { useAuth } from '@/lib/auth';
-import { Box, Button, Center, extendTheme, Flex, Heading, HStack, IconButton, Image, Link, Stack, Text, useColorMode, useColorModeValue } from '@chakra-ui/react'
+import { Box, Button, Center, extendTheme, Flex, Heading, HStack, IconButton, Image, Link, Stack, Text, useColorMode, useColorModeValue, useMediaQuery } from '@chakra-ui/react'
 import Head from 'next/head'
 
 export default function Home() {
@@ -11,8 +12,10 @@ export default function Home() {
     const btnbg = useColorModeValue("cyan.300", "cyan.400");
     const boxbg = useColorModeValue("gray.200", "gray.700");
     const auth = useAuth();
+    const [isLargerThan1000] = useMediaQuery("(max-width: 1000px)");
 
-    //Button background color is switched in designs 
+
+    //Work on responsive of the header
 
 
     return (
@@ -23,15 +26,32 @@ export default function Home() {
 
             <Flex flexDirection="column">
                 <NavBar />
-            </Flex>
+                <br></br>
+                {isLargerThan1000 ? (
+                    <Flex
+                        flexDirection="column"
+                        maxWidth="800px"
+                        width="100%"
+                        ml="auto"
+                        mr="auto">
+                        <DashHeader />
 
-            <Flex
-                align="center"
-                py={4}
-                px={8}
-                justify="center"
-            >
-                <Text>Hey {auth?.user ? auth.user.email : 'None'}</Text>
+                        <Text> Hey {auth?.user ? auth.user.email : 'None'}</Text>
+                    </Flex>
+                ) : (
+                        <Flex
+                            flexDirection="column"
+                            maxWidth="1000px"
+                            width="100%"
+                            ml="auto"
+                            mr="auto">
+                            <DashHeader />
+
+                            <Text> Hey {auth?.user ? auth.user.email : 'None'}</Text>
+                        </Flex>
+                    )
+                }
+
             </Flex>
         </>
     )

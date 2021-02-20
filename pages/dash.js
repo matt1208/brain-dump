@@ -12,10 +12,7 @@ export default function Home() {
     const btnbg = useColorModeValue("cyan.300", "cyan.400");
     const boxbg = useColorModeValue("gray.200", "gray.700");
     const auth = useAuth();
-    const [isLargerThan1000] = useMediaQuery("(max-width: 1000px)");
-
-
-    //Work on responsive of the header
+    const [isLargerThan1075] = useMediaQuery("(max-width: 1075px)");
 
 
     return (
@@ -27,11 +24,13 @@ export default function Home() {
             <Flex flexDirection="column">
                 <NavBar />
                 <br></br>
-                {isLargerThan1000 ? (
+                {isLargerThan1075 ? (
                     <Flex
                         flexDirection="column"
-                        maxWidth="800px"
+                        maxWidth="700px"
                         width="100%"
+                        px={8}
+
                         ml="auto"
                         mr="auto">
                         <DashHeader />

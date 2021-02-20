@@ -14,7 +14,7 @@ const DashHeader = () => {
     return (
         <Flex justifyContent="space-between">
             <Heading color={color} mb={8} size="2xl">Header</Heading>
-            <Button>+ Add Site</Button>
+            <Button bg={btnbg}>+ Add Site</Button>
         </Flex>
     )
 }

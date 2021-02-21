@@ -1,4 +1,5 @@
 import { Button, Flex, Heading, Text, useColorMode, useColorModeValue } from "@chakra-ui/react";
+import AddThought from "./AddThought";
 
 const EmptyArea = () => {
     const { toggleColorMode } = useColorMode()
@@ -12,14 +13,14 @@ const EmptyArea = () => {
             flexDirection="column"
             borderRadius="10px"
             alignItems="center"
-            p={4}
+            p={6}
             mt={4}
             bg={boxbg}
         >
-            <Heading color={color}>Test Flex</Heading>
-            <Text color={color} py={4}>Descripton</Text>
-            <Button bg={btnbg} width="150px">Button</Button>
-            <Text color={color} pt={4}>Descripton</Text>
+            <Heading color={color} textAlign="center">You Haven't Added Anything!</Heading>
+            <Text color={color} textAlign="center" py={4}>Add your thoughts, ideas, and notes so you can remember later.</Text>
+            <AddThought />
+            <Text color={color} pt={4}>Learn More</Text>
 
         </Flex>
     )

@@ -17,9 +17,11 @@ import {
     Button,
     useToast,
     useColorMode,
-    useColorModeValue
+    useColorModeValue,
+    Select
 } from "@chakra-ui/react";
 import { useAuth } from '@/lib/auth';
+import { createThought } from '@/lib/db';
 
 const AddThought = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -27,23 +29,24 @@ const AddThought = () => {
     const initialRef = React.useRef()
     const toast = useToast();
     const { handleSubmit, register } = useForm();
-    const onCreateSite = ({ name, url }) => {
-        const newSite = {
+    const onCreateThought = ({ title, thought, tag }) => {
+        const newThought = {
             authorId: auth.user.uid,
             createAt: new Date().toISOString(),
-            name,
-            url
+            title,
+            thought,
+            tag
         }
-        createSite(newSite);
+        createThought(newThought);
         toast({
             title: "Success!.",
-            description: "We've added your task.",
+            description: "We've added your thought.",
             status: "success",
             duration: 5000,
             isClosable: true,
         });
         // mutate(
-        //     ['/api/sites', auth.user.token],
+        //     ['/api/thought', auth.user.token],
         //     async (data) => ({
         //         sites: [...data.sites, { id, ...newSite }]
         //     }),
@@ -51,56 +54,73 @@ const AddThought = () => {
         // );
         onClose();
 
-        //Colors 
 
-        const { toggleColorMode } = useColorMode()
-        const color = useColorModeValue("gray.600", "gray.300");
-        const pcolor = useColorModeValue("pink.200", "pink.200");
-        const btnbg = useColorModeValue("cyan.300", "cyan.400");
-        const boxbg = useColorModeValue("gray.200", "gray.700");
     };
+    //Colors 
+
+    const { toggleColorMode } = useColorMode()
+    const color = useColorModeValue("gray.600", "gray.300");
+    const pcolor = useColorModeValue("pink.200", "pink.200");
+    const btnbg = useColorModeValue("cyan.300", "cyan.400");
+    const boxbg = useColorModeValue("gray.200", "gray.700");
 
     return (
         <>
             <Button
                 onClick={onOpen}
+                bg={btnbg}
             >
-                + Add To Do
+                + Add Thought
             </Button>
 
             <Modal
                 initialFocusRef={initialRef}
                 isOpen={isOpen}
                 onClose={onClose}
+                bg={boxbg}
             >
                 <ModalOverlay />
-                <ModalContent as="form" onSubmit={handleSubmit(onCreateSite)}>
-                    <ModalHeader fontWeight="bold">Header</ModalHeader>
+                <ModalContent as="form" onSubmit={handleSubmit(onCreateThought)}>
+                    <ModalHeader fontWeight="bold" color={color}>Add Your Thought</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody pb={6}>
+
                         <FormControl>
-                            <FormLabel>Title</FormLabel>
-                            <Input ref={initialRef} placeholder="Clean" name="name"
+                            <FormLabel color={color}>Title</FormLabel>
+                            <Input ref={initialRef} placeholder="Clean" name="title"
                                 ref={register({
                                     required: "Required",
                                 })} />
                         </FormControl>
 
                         <FormControl mt={4}>
-                            <FormLabel>Title</FormLabel>
-                            <Input placeholder="Imporant" name="url"
+                            <FormLabel color={color}>Thought</FormLabel>
+                            <Input placeholder="Imporant" name="thought"
                                 ref={register({
                                     required: "Required",
                                 })} />
                         </FormControl>
+
+                        <FormControl mt={4}>
+                            <FormLabel color={color}>Tag</FormLabel>
+                            <Select placeholder="Imporant" name="tag"
+                                ref={register({
+                                    required: "Required",
+                                })} >
+                                <option>United Arab Emirates</option>
+                                <option>Nigeria</option>
+                            </Select>
+                        </FormControl>
+
                     </ModalBody>
 
                     <ModalFooter>
                         <Button fontWeight="medium" onClick={onClose} mr={3}>Cancel</Button>
 
-                        <Button backgroundColor="#00B7E0" color="white" fontWeight="medium" type="submit" _hover={{ color: 'gray.700' }}>
+                        <Button bg={btnbg} color="white" fontWeight="medium" type="submit" _hover={{ color: 'gray.700' }}>
                             Create
                         </Button>
+
                     </ModalFooter>
                 </ModalContent>
             </Modal>

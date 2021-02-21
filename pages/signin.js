@@ -3,6 +3,8 @@ import { useAuth } from '@/lib/auth';
 import { SunIcon } from '@chakra-ui/icons';
 import { Box, Button, Center, extendTheme, Flex, Heading, HStack, IconButton, Image, Link, Stack, Text, useColorMode, useColorModeValue } from '@chakra-ui/react'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
+
 
 export default function Home() {
 
@@ -12,6 +14,7 @@ export default function Home() {
     const btnbg = useColorModeValue("cyan.300", "cyan.400");
     const boxbg = useColorModeValue("gray.200", "gray.700");
     const auth = useAuth();
+    const router = useRouter()
 
     //Button background color is switched in designs 
 
@@ -46,17 +49,31 @@ export default function Home() {
                     </HStack>
 
                     <Center>
-                        <Button
-                            onClick={(e) => auth.signinWithGithub()}
-                            mt="6"
-                            backgroundColor={btnbg}
-                            size="lg"
-                            width="175px"
-                            height="50px"
-                            _hover={{ bg: "#A0AEC0" }}
-                        >
-                            Sign In with Github
-                        </Button>
+                        {auth?.user ? (
+                            <Button
+                                onClick={() => router.push('/dash')}
+                                mt="6"
+                                backgroundColor={btnbg}
+                                size="lg"
+                                width="175px"
+                                height="50px"
+                                _hover={{ bg: "#A0AEC0" }}
+                            >
+                                Go to Dash
+                            </Button>
+                        ) : (
+                                <Button
+                                    onClick={(e) => auth.signinWithGithub()}
+                                    mt="6"
+                                    backgroundColor={btnbg}
+                                    size="lg"
+                                    width="175px"
+                                    height="50px"
+                                    _hover={{ bg: "#A0AEC0" }}
+                                >
+                                    Sign In with Github
+                                </Button>
+                            )}
                     </Center>
                 </Box>
             </Flex>

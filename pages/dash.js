@@ -1,4 +1,5 @@
 import DashHeader from '@/components/DashHeader';
+import EmptyArea from '@/components/EmptyState';
 import NavBar from '@/components/NavBar';
 import { useAuth } from '@/lib/auth';
 import { Box, Button, Center, extendTheme, Flex, Heading, HStack, IconButton, Image, Link, Stack, Text, useColorMode, useColorModeValue, useMediaQuery } from '@chakra-ui/react'
@@ -35,7 +36,11 @@ export default function Home() {
                         mr="auto">
                         <DashHeader />
 
-                        <Text> Hey {auth?.user ? auth.user.email : 'None'}</Text>
+                        <EmptyArea />
+
+                        <Text mt={4}> Hey {auth?.user ? auth.user.email : 'None'}</Text>
+
+
                     </Flex>
                 ) : (
                         <Flex
@@ -46,7 +51,10 @@ export default function Home() {
                             mr="auto">
                             <DashHeader />
 
-                            <Text> Hey {auth?.user ? auth.user.email : 'None'}</Text>
+                            <EmptyArea />
+
+
+                            <Text mt={4}> Hey {auth?.user ? auth.user.email : 'None'}</Text>
                         </Flex>
                     )
                 }

@@ -1,6 +1,7 @@
 import { useAuth } from '@/lib/auth';
 import { Box, Button, Center, Circle, Container, Flex, Heading, HStack, IconButton, Image, Link, SimpleGrid, Stack, Text, useColorMode, useColorModeValue, useMediaQuery, VStack } from '@chakra-ui/react'
 import { useRouter } from 'next/router';
+import AddThought from '@/components/AddThought'
 
 const DashHeader = () => {
     const { toggleColorMode } = useColorMode()
@@ -14,7 +15,7 @@ const DashHeader = () => {
     return (
         <Flex justifyContent="space-between">
             <Heading color={color} mb={8} size="2xl">Header</Heading>
-            <Button bg={btnbg}>+ Add Site</Button>
+            <AddThought />
         </Flex>
     )
 }

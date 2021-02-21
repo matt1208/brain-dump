@@ -11,7 +11,7 @@ const VLandingHeader = () => {
 
 
     return (
-        <Box borderLeft="3px solid" borderColor={btnbg} pl={4} mx={20}>
+        <Box borderLeft="3px solid" borderColor={btnbg} pl={4} mx={8}>
             <HStack pt={6}>
                 <Heading size="4xl" color={color}>Brain</Heading>
                 <Heading size="4xl" color={pcolor}>DUMP</Heading>

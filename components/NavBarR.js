@@ -45,13 +45,13 @@ const NavBarR = () => {
                         >
                             Sign Out
                         </Button>
-                        <IconButton aria-label="Search database" icon={<SunIcon />} bg={btnbg} size="lg" onClick={toggleColorMode}>
+                        <IconButton aria-label="Search database" icon={<SunIcon />} size="lg" onClick={toggleColorMode}>
                             Theme
                         </IconButton>
                     </>
 
                 ) : (
-                        <IconButton aria-label="Search database" icon={<SunIcon />} bg={btnbg} size="lg" onClick={toggleColorMode}>
+                        <IconButton aria-label="Search database" icon={<SunIcon />} size="lg" onClick={toggleColorMode}>
                             Theme
                         </IconButton>
 

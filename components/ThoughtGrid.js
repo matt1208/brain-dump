@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Heading, SimpleGrid, Text, useColorMode, useColorModeValue } from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, SimpleGrid, Tag, Text, useColorMode, useColorModeValue } from "@chakra-ui/react";
 
 const ThoughtGrid = ({ sites }) => {
     const { toggleColorMode } = useColorMode()
@@ -10,10 +10,10 @@ const ThoughtGrid = ({ sites }) => {
     return (
         <SimpleGrid columns={3} spacing={10}>
             {sites.map((site) => (
-                <Box bg={boxbg}>
-                    <Heading>{site.title}</Heading>
-                    <Text>{site.thought}</Text>
-                    <Text>{site.tag}</Text>
+                <Box bg={boxbg} p={4} borderRadius="10px">
+                    <Heading pb={2} size="lg" color={color}>{site.title}</Heading>
+                    <Tag>{site.tag}</Tag>
+                    <Text pt={4} color={color}>{site.thought}</Text>
                 </Box>
             ))}
 

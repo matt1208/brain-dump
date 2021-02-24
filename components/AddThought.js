@@ -37,7 +37,8 @@ const AddThought = () => {
             thought,
             tag
         }
-        createThought(newThought);
+        const { id } = createThought(newThought);
+
         toast({
             title: "Success!.",
             description: "We've added your thought.",
@@ -48,7 +49,7 @@ const AddThought = () => {
         // mutate(
         //     ['/api/thought', auth.user.token],
         //     async (data) => ({
-        //         sites: [...data.sites, { id, ...newSite }]
+        //         sites: [{ id, ...newThought }, ...data.sites]
         //     }),
         //     false
         // );
@@ -87,7 +88,7 @@ const AddThought = () => {
 
                         <FormControl>
                             <FormLabel color={color}>Title</FormLabel>
-                            <Input ref={initialRef} placeholder="Clean" name="title"
+                            <Input ref={initialRef} placeholder="New Project!" name="title"
                                 ref={register({
                                     required: "Required",
                                 })} />
@@ -95,7 +96,7 @@ const AddThought = () => {
 
                         <FormControl mt={4}>
                             <FormLabel color={color}>Thought</FormLabel>
-                            <Input placeholder="Imporant" name="thought"
+                            <Input placeholder="Whats on your mind..." name="thought"
                                 ref={register({
                                     required: "Required",
                                 })} />
@@ -107,8 +108,9 @@ const AddThought = () => {
                                 ref={register({
                                     required: "Required",
                                 })} >
-                                <option>United Arab Emirates</option>
-                                <option>Nigeria</option>
+                                <option>Idea</option>
+                                <option>Note</option>
+                                <option>Random</option>
                             </Select>
                         </FormControl>
 

@@ -16,7 +16,7 @@ const VLandingHeader = () => {
                 <Heading size="4xl" color={color}>Brain</Heading>
                 <Heading size="4xl" color={pcolor}>DUMP</Heading>
             </HStack>
-            <Text fontSize="xl" pt="4" fontWeight="bold">A place to quickly store your random thoughts, ideas, and more. Sign in and write down your thoughts so you can remember them later.</Text>
+            <Text color={color} fontSize="xl" pt="4" fontWeight="bold">A place to quickly store your random thoughts, ideas, and more. Sign in and write down your thoughts so you can remember them later.</Text>
             <Button mt="6" backgroundColor={btnbg} size="lg" width="175px" height="50px" _hover={{ bg: "#A0AEC0" }} onClick={() => router.push('/signin')} >Get Started</Button>
         </Box>
     )

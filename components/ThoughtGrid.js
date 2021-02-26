@@ -12,7 +12,7 @@ const ThoughtGrid = ({ sites }) => {
             {sites.map((site) => (
                 <Box bg={boxbg} p={4} borderRadius="10px">
                     <Heading pb={2} size="lg" color={color}>{site.title}</Heading>
-                    <Tag>{site.tag}</Tag>
+                    <Tag border="2px solid" borderColor={pcolor} color={color}>{site.tag}</Tag>
                     <Text pt={4} color={color}>{site.thought}</Text>
                 </Box>
             ))}

@@ -18,7 +18,10 @@ import {
     useToast,
     useColorMode,
     useColorModeValue,
-    Select
+    Select,
+    Text,
+    Alert,
+    AlertIcon
 } from "@chakra-ui/react";
 import { useAuth } from '@/lib/auth';
 import { createThought } from '@/lib/db';
@@ -83,6 +86,10 @@ const AddThought = () => {
                 <ModalOverlay />
                 <ModalContent as="form" onSubmit={handleSubmit(onCreateThought)}>
                     <ModalHeader fontWeight="bold" color={color}>Add Your Thought</ModalHeader>
+                    {/* <Alert status="error">
+                        <AlertIcon />
+                        Do not store passwords or personal data
+                    </Alert> */}
                     <ModalCloseButton />
                     <ModalBody pb={6}>
 

@@ -14,7 +14,7 @@ const DashHeader = () => {
 
     return (
         <Flex justifyContent="space-between">
-            <Heading color={color} mb={8} size="2xl">Header</Heading>
+            <Heading color={color} mb={8} size="2xl">Thoughts</Heading>
             <AddThought />
         </Flex>
     )

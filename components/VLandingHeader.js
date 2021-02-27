@@ -1,3 +1,4 @@
+import { useAuth } from '@/lib/auth';
 import { Box, Button, Center, Circle, Container, Flex, Heading, HStack, IconButton, Image, Link, SimpleGrid, Stack, Text, useColorMode, useColorModeValue, useMediaQuery, VStack } from '@chakra-ui/react'
 import { useRouter } from 'next/router'
 
@@ -8,6 +9,8 @@ const VLandingHeader = () => {
     const btnbg = useColorModeValue("cyan.300", "cyan.400");
     const boxbg = useColorModeValue("gray.200", "gray.700");
     const router = useRouter()
+    const auth = useAuth();
+
 
 
     return (
@@ -17,7 +20,32 @@ const VLandingHeader = () => {
                 <Heading size="4xl" color={pcolor}>DUMP</Heading>
             </HStack>
             <Text color={color} fontSize="xl" pt="4" fontWeight="bold">A place to quickly store your random thoughts, ideas, and more. Sign in and write down your thoughts so you can remember them later.</Text>
-            <Button mt="6" backgroundColor={btnbg} size="lg" width="175px" height="50px" _hover={{ bg: "#A0AEC0" }} onClick={() => router.push('/signin')} >Get Started</Button>
+            {/* <Button mt="6" backgroundColor={btnbg} size="lg" width="175px" height="50px" _hover={{ bg: "#A0AEC0" }} onClick={() => router.push('/signin')} >Get Started</Button> */}
+            {auth?.user ? (
+                <Button
+                    onClick={() => router.push('/dash')}
+                    mt="6"
+                    backgroundColor={btnbg}
+                    size="lg"
+                    width="175px"
+                    height="50px"
+                    _hover={{ bg: "#A0AEC0" }}
+                >
+                    Go to Dash
+                </Button>
+            ) : (
+                    <Button
+                        mt="6"
+                        backgroundColor={btnbg}
+                        size="lg"
+                        width="175px"
+                        height="50px"
+                        _hover={{ bg: "#A0AEC0" }}
+                        onClick={() => router.push('/signin')}
+                    >
+                        Get Started
+                    </Button>
+                )}
         </Box>
     )
 }

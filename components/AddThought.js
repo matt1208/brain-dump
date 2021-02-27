@@ -49,13 +49,13 @@ const AddThought = () => {
             duration: 5000,
             isClosable: true,
         });
-        // mutate(
-        //     ['/api/thought', auth.user.token],
-        //     async (data) => ({
-        //         sites: [{ id, ...newThought }, ...data.sites]
-        //     }),
-        //     false
-        // );
+        mutate(
+            ['/api/thought', auth.user.token],
+            async (data) => ({
+                sites: [{ id, ...newThought }, ...data.sites]
+            }),
+            false
+        );
         onClose();
 
 

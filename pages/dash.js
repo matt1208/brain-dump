@@ -18,9 +18,9 @@ const Dash = () => {
     const pcolor = useColorModeValue("pink.200", "pink.200");
     const btnbg = useColorModeValue("cyan.300", "cyan.400");
     const boxbg = useColorModeValue("gray.200", "gray.700");
-    const auth = useAuth();
+    const { user } = useAuth();
     const [isLargerThan1075] = useMediaQuery("(max-width: 1075px)");
-    const { data } = useSWR('/api/thought', fetcher);
+    const { data } = useSWR(user ? ['/api/thought', user.token] : null, fetcher);
 
 
     if (!data) {
@@ -33,7 +33,7 @@ const Dash = () => {
 
     return (
         <Shell>
-            {data.sites.length ? <ThoughtGrid sites={data.sites} /> : <EmptyArea />}
+            {data?.sites?.length ? (<ThoughtGrid sites={data.sites} />) : (<EmptyArea />)}
         </Shell>
     );
 };

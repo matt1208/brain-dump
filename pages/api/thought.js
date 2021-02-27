@@ -1,10 +1,13 @@
-import { getAllThoughts } from '@/lib/db-admin';
+import { auth } from '@/lib/firebase-admin';
+import { getUserThoughts } from '@/lib/db-admin';
 
-export default async (_, res) => {
-    const { sites, error } = await getAllThoughts();
-    if (error) {
+export default async (req, res) => {
+    try {
+        const { uid } = await auth.verifyIdToken(req.headers.token);
+        const { sites } = await getUserThoughts(uid);
+
+        res.status(200).json({ sites });
+    } catch (error) {
         res.status(500).json({ error });
     }
-    res.status(200).json({ sites });
-
 };

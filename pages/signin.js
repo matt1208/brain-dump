@@ -62,17 +62,31 @@ export default function Home() {
                                 Go to Dash
                             </Button>
                         ) : (
-                                <Button
-                                    onClick={(e) => auth.signinWithGithub()}
-                                    mt="6"
-                                    backgroundColor={btnbg}
-                                    size="lg"
-                                    width="175px"
-                                    height="50px"
-                                    _hover={{ bg: "#A0AEC0" }}
-                                >
-                                    Sign In with Github
+                                <Stack>
+                                    <Button
+                                        onClick={(e) => auth.signinWithGithub()}
+                                        mt="6"
+                                        backgroundColor={btnbg}
+                                        size="lg"
+                                        width="175px"
+                                        height="50px"
+                                        _hover={{ bg: "#A0AEC0" }}
+                                    >
+                                        Sign In with Github
                                 </Button>
+
+                                    <Button
+                                        onClick={(e) => auth.signinWithGoogle()}
+                                        mt="6"
+                                        backgroundColor={btnbg}
+                                        size="lg"
+                                        width="175px"
+                                        height="50px"
+                                        _hover={{ bg: "#A0AEC0" }}
+                                    >
+                                        Sign In with Google
+</Button>
+                                </Stack>
                             )}
                     </Center>
                 </Box>

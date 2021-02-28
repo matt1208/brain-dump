@@ -21,7 +21,8 @@ import {
     Select,
     Text,
     Alert,
-    AlertIcon
+    AlertIcon,
+    Textarea
 } from "@chakra-ui/react";
 import { useAuth } from '@/lib/auth';
 import { createThought } from '@/lib/db';
@@ -103,7 +104,7 @@ const AddThought = () => {
 
                         <FormControl mt={4}>
                             <FormLabel color={color}>Thought</FormLabel>
-                            <Input placeholder="Whats on your mind..." name="thought"
+                            <Textarea placeholder="Whats on your mind..." name="thought"
                                 ref={register({
                                     required: "Required",
                                 })} />

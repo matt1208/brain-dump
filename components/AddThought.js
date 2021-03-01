@@ -112,10 +112,11 @@ const AddThought = () => {
 
                         <FormControl mt={4}>
                             <FormLabel color={color}>Tag</FormLabel>
-                            <Select placeholder="Imporant" name="tag"
+                            <Select placeholder="Select a tag" name="tag"
                                 ref={register({
                                     required: "Required",
                                 })} >
+                                <option>Imporant</option>
                                 <option>Idea</option>
                                 <option>Note</option>
                                 <option>Random</option>

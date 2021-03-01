@@ -41,7 +41,7 @@ export default function Home() {
                     paddingLeft="auto"
                     paddingRight="auto"
                     borderRadius="10px"
-                    margin="52"
+                    margin="40"
                 >
                     <HStack>
                         <Heading size="2xl" color={color}>Brain</Heading>

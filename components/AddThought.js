@@ -67,6 +67,7 @@ const AddThought = () => {
     const color = useColorModeValue("gray.600", "gray.300");
     const pcolor = useColorModeValue("pink.200", "pink.200");
     const btnbg = useColorModeValue("cyan.300", "cyan.400");
+    const btncolor = useColorModeValue("gray.700", "white");
     const boxbg = useColorModeValue("gray.200", "gray.700");
 
     return (
@@ -74,6 +75,7 @@ const AddThought = () => {
             <Button
                 onClick={onOpen}
                 bg={btnbg}
+                color={btncolor}
             >
                 + Add Thought
             </Button>

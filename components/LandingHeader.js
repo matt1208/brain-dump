@@ -7,6 +7,7 @@ const LandingHeader = () => {
     const color = useColorModeValue("gray.600", "gray.300");
     const pcolor = useColorModeValue("pink.200", "pink.200");
     const btnbg = useColorModeValue("cyan.300", "cyan.400");
+    const btncolor = useColorModeValue("gray.700", "white");
     const boxbg = useColorModeValue("gray.200", "gray.700");
     const [isLargerThan1100] = useMediaQuery("(max-width: 1100px)");
     const router = useRouter();
@@ -38,6 +39,7 @@ const LandingHeader = () => {
                         <Button
                             mt="6"
                             backgroundColor={btnbg}
+                            color={btncolor}
                             size="lg"
                             width="175px"
                             height="50px"

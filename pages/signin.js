@@ -1,5 +1,6 @@
 import NavBar from '@/components/NavBar';
 import { useAuth } from '@/lib/auth';
+import { GitHubIcon, GoogleIcon } from '@/styles/Icons';
 import { SunIcon } from '@chakra-ui/icons';
 import { Box, Button, Center, extendTheme, Flex, Heading, HStack, IconButton, Image, Link, Stack, Text, useColorMode, useColorModeValue } from '@chakra-ui/react'
 import Head from 'next/head'
@@ -67,11 +68,12 @@ export default function Home() {
                                 <Stack>
                                     <Button
                                         onClick={(e) => auth.signinWithGithub()}
+                                        leftIcon={<GitHubIcon />}
                                         mt="6"
                                         backgroundColor={btnbg}
                                         color={btncolor}
                                         size="lg"
-                                        width="175px"
+                                        width="200px"
                                         height="50px"
                                         _hover={{ bg: "#A0AEC0" }}
                                     >
@@ -80,11 +82,12 @@ export default function Home() {
 
                                     <Button
                                         onClick={(e) => auth.signinWithGoogle()}
+                                        leftIcon={<GoogleIcon />}
                                         mt="6"
                                         backgroundColor={btnbg}
                                         color={btncolor}
                                         size="lg"
-                                        width="175px"
+                                        width="200px"
                                         height="50px"
                                         _hover={{ bg: "#A0AEC0" }}
                                     >

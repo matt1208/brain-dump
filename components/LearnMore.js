@@ -72,12 +72,12 @@ const LearnMore = () => {
                         <List spacing={4}>
 
                             <ListItem>
-                                <ListIcon as={ArrowForwardIcon} color={pcolor} />
+                                <ListIcon boxSize="20px" as={ArrowForwardIcon} color={pcolor} />
                                 Whenever you need to store a thought or idea that pops into your brain use BrainDUMP to store it quickly.
                             </ListItem>
 
                             <ListItem>
-                                <ListIcon as={ArrowForwardIcon} color={pcolor} />
+                                <ListIcon boxSize="20px" as={ArrowForwardIcon} color={pcolor} />
                                 Each thought gets its own Thought Card, including the title, whatever you wanted to write down, and a tag to help you better sort all your thoughts.
                             </ListItem>
 
@@ -87,17 +87,17 @@ const LearnMore = () => {
                              </Alert>
 
                             <ListItem>
-                                <ListIcon as={ArrowForwardIcon} color={pcolor} />
+                                <ListIcon boxSize="20px" as={ArrowForwardIcon} color={pcolor} />
                                 Each thought you create can be deleted at any time once you don't need it.
                             </ListItem>
 
                             <ListItem>
-                                <ListIcon as={ArrowForwardIcon} color={pcolor} />
+                                <ListIcon boxSize="20px" as={ArrowForwardIcon} color={pcolor} />
                                 BrainDUMP believes privacy is a top priority, which is why we keep all thoughts private and we will not sell your data.
                             </ListItem>
 
                             <ListItem>
-                                <ListIcon as={ArrowForwardIcon} color={pcolor} />
+                                <ListIcon boxSize="20px" as={ArrowForwardIcon} color={pcolor} />
                                 <Link fontWeight="semibold">Read More</Link>
                             </ListItem>
 

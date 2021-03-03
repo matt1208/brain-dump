@@ -1,5 +1,6 @@
 import { Button, Flex, Heading, Text, useColorMode, useColorModeValue } from "@chakra-ui/react";
 import AddThought from "./AddThought";
+import LearnMore from "./LearnMore";
 
 const EmptyArea = () => {
     const { toggleColorMode } = useColorMode()
@@ -20,7 +21,7 @@ const EmptyArea = () => {
             <Heading color={color} textAlign="center">You Haven't Added Anything!</Heading>
             <Text color={color} textAlign="center" py={4}>Add your thoughts, ideas, and notes so you can remember later.</Text>
             <AddThought />
-            <Text color={color} pt={4}>Learn More</Text>
+            <LearnMore />
 
         </Flex>
     )

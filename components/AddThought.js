@@ -76,6 +76,7 @@ const AddThought = () => {
                 onClick={onOpen}
                 bg={btnbg}
                 color={btncolor}
+                _hover={{ bg: "#3CD7F6" }}
             >
                 + Add Thought
             </Button>

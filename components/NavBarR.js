@@ -43,7 +43,7 @@ const NavBarR = () => {
                             size="lg"
                             mr={4}
                             height="50px"
-                            _hover={{ bg: "#A0AEC0" }}
+                            _hover={{ bg: "#3CD7F6" }}
                         >
                             Sign Out
                         </Button>

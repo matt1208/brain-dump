@@ -31,7 +31,7 @@ const LandingHeader = () => {
                         size="lg"
                         width="175px"
                         height="50px"
-                        _hover={{ bg: "#A0AEC0" }}
+                        _hover={{ bg: "#3CD7F6" }}
                     >
                         Go to Dash
                     </Button>
@@ -43,7 +43,7 @@ const LandingHeader = () => {
                             size="lg"
                             width="175px"
                             height="50px"
-                            _hover={{ bg: "#A0AEC0" }}
+                            _hover={{ bg: "#3CD7F6" }}
                             onClick={() => router.push('/signin')}
                         >
                             Get Started

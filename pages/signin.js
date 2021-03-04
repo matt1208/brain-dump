@@ -60,7 +60,7 @@ export default function Home() {
                                 size="lg"
                                 width="175px"
                                 height="50px"
-                                _hover={{ bg: "#A0AEC0" }}
+                                _hover={{ bg: "#3CD7F6" }}
                             >
                                 Go to Dash
                             </Button>
@@ -75,7 +75,7 @@ export default function Home() {
                                         size="lg"
                                         width="200px"
                                         height="50px"
-                                        _hover={{ bg: "#A0AEC0" }}
+                                        _hover={{ bg: "#3CD7F6" }}
                                     >
                                         Sign In with Github
                                 </Button>
@@ -89,7 +89,7 @@ export default function Home() {
                                         size="lg"
                                         width="200px"
                                         height="50px"
-                                        _hover={{ bg: "#A0AEC0" }}
+                                        _hover={{ bg: "#3CD7F6" }}
                                     >
                                         Sign In with Google
 </Button>

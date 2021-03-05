@@ -6,6 +6,8 @@ import VLandingHeader from '@/components/VLandingHeader';
 import { SunIcon } from '@chakra-ui/icons';
 import { Box, Button, Center, Circle, Container, Flex, Heading, HStack, IconButton, Image, Link, SimpleGrid, Stack, Text, useColorMode, useColorModeValue, useMediaQuery, VStack } from '@chakra-ui/react'
 import Head from 'next/head'
+import FooterV from '@/components/FooterV'
+import Footer1 from '@/components/Footer';
 
 
 export default function Home() {
@@ -53,6 +55,10 @@ export default function Home() {
         }
 
       </Container>
+
+      <Flex flexDirection="column">
+        <Footer1 />
+      </Flex>
     </>
   )
 }

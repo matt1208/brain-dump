@@ -32,8 +32,8 @@ const FooterV = () => {
                     spacing={4}
                     alignItems="stretch"
                 >
-                    <Text fontSize="16px" opacity="75%" fontWeight="semibold" color={color}>Privacy</Text>
-                    <Text fontSize="16px" opacity="75%" fontWeight="semibold" color={color}>About</Text>
+                    <Link fontSize="16px" opacity="75%" fontWeight="semibold" color={color}>Privacy</Link>
+                    <Link fontSize="16px" opacity="75%" fontWeight="semibold" color={color}>About</Link>
                 </Stack>
             </Flex>
         </Flex >

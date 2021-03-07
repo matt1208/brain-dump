@@ -1,4 +1,6 @@
-import { Box, Button, Flex, Heading, SimpleGrid, Tag, Text, useColorMode, useColorModeValue } from "@chakra-ui/react";
+import { DeleteIcon, InfoOutlineIcon } from "@chakra-ui/icons";
+import { Box, Button, Flex, Heading, HStack, Icon, IconButton, SimpleGrid, Tag, Text, useColorMode, useColorModeValue } from "@chakra-ui/react";
+import DeleteBtn from '@/components/Delete';
 
 const ThoughtGrid = ({ sites }) => {
     const { toggleColorMode } = useColorMode()
@@ -13,6 +15,7 @@ const ThoughtGrid = ({ sites }) => {
                 <Box bg={boxbg} p={4} borderRadius="10px">
                     <Heading pb={2} size="lg" color={color}>{site.title}</Heading>
                     <Tag border="2px solid" borderColor={pcolor} color={color}>{site.tag}</Tag>
+                    <DeleteBtn siteId={site.id} />
                     <Text pt={4} color={color}>{site.thought}</Text>
                 </Box>
             ))}

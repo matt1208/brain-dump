@@ -9,12 +9,13 @@ import {
     AlertDialogOverlay,
     IconButton,
     Button,
-    Checkbox
+    Checkbox,
+    useColorMode,
+    useColorModeValue
 } from '@chakra-ui/react';
 import { deleteThought } from '@/lib/db';
 import { DeleteIcon } from '@chakra-ui/icons';
 import { useAuth } from '@/lib/auth';
-
 
 const DeleteBtn = ({ siteId }) => {
     const [isOpen, setIsOpen] = useState();
@@ -35,6 +36,13 @@ const DeleteBtn = ({ siteId }) => {
         onClose();
     };
 
+    const { toggleColorMode } = useColorMode()
+    const color = useColorModeValue("gray.600", "gray.300");
+    const pcolor = useColorModeValue("pink.200", "pink.200");
+    const btnbg = useColorModeValue("cyan.300", "cyan.400");
+    const btncolor = useColorModeValue("gray.700", "white");
+    const boxbg = useColorModeValue("gray.200", "gray.700");
+
     return (
         <>
             <IconButton
@@ -54,11 +62,12 @@ const DeleteBtn = ({ siteId }) => {
                 onClose={onClose}
             >
                 <AlertDialogOverlay />
-                <AlertDialogContent>
-                    <AlertDialogHeader fontSize="lg" fontWeight="bold">
+                <AlertDialogContent bg={boxbg}
+                >
+                    <AlertDialogHeader color={color} fontSize="lg" fontWeight="bold">
                         Delete Thought
                 </AlertDialogHeader>
-                    <AlertDialogBody>
+                    <AlertDialogBody color={color}>
                         Are you sure? You can't undo this action afterwards.
                     </AlertDialogBody>
                     <AlertDialogFooter>
@@ -70,6 +79,7 @@ const DeleteBtn = ({ siteId }) => {
                             colorScheme="red"
                             onClick={onDelete}
                             ml={3}
+                            color="white"
                         >
                             Delete
                         </Button>

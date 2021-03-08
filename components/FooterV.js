@@ -34,7 +34,7 @@ const FooterV = () => {
                 >
                     <Link onClick={() => router.push('/signin')} fontSize="16px" opacity="75%" fontWeight="semibold" color={color}>Sign In</Link>
                     <Link fontSize="16px" opacity="75%" fontWeight="semibold" color={color}>Privacy</Link>
-                    <Link fontSize="16px" opacity="75%" fontWeight="semibold" color={color}>About</Link>
+                    <Link onClick={() => router.push('/about')} fontSize="16px" opacity="75%" fontWeight="semibold" color={color}>About</Link>
                 </Stack>
             </Flex>
         </Flex >

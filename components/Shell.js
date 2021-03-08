@@ -34,7 +34,6 @@ const Shell = ({ children }) => {
                         maxWidth="700px"
                         width="100%"
                         px={8}
-
                         ml="auto"
                         mr="auto">
                         <DashHeader />
@@ -46,20 +45,20 @@ const Shell = ({ children }) => {
 
                     </Flex>
                 ) : (
-                        <Flex
-                            flexDirection="column"
-                            maxWidth="1000px"
-                            width="100%"
-                            ml="auto"
-                            mr="auto">
-                            <DashHeader />
+                    <Flex
+                        flexDirection="column"
+                        maxWidth="1000px"
+                        width="100%"
+                        ml="auto"
+                        mr="auto">
+                        <DashHeader />
 
-                            {children}
+                        {children}
 
 
-                            <Text mt={4}> Hey {auth?.user ? auth.user.email : 'None'}</Text>
-                        </Flex>
-                    )
+                        <Text mt={4}> Hey {auth?.user ? auth.user.email : 'None'}</Text>
+                    </Flex>
+                )
                 }
 
             </Flex>

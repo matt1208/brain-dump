@@ -37,7 +37,7 @@ const AboutList = () => {
 
                 <Alert status="error">
                     <AlertIcon />
-                                  Do not store passwords or personal data
+                                  Do not store passwords or personal data on BrainDUMP
                              </Alert>
 
                 <ListItem color={color}>

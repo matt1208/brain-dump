@@ -21,10 +21,13 @@ import {
     ListItem
 } from "@chakra-ui/react";
 import { ArrowForwardIcon } from '@chakra-ui/icons';
+import { useRouter } from 'next/router'
+
 
 const LearnMore = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const initialRef = React.useRef()
+    const router = useRouter()
 
 
     //Colors 
@@ -89,7 +92,7 @@ const LearnMore = () => {
 
                             <ListItem color={color}>
                                 <ListIcon boxSize="20px" as={ArrowForwardIcon} color={pcolor} />
-                                <Link fontWeight="semibold">Read More</Link>
+                                <Link onClick={() => router.push('/about')} fontWeight="semibold">Read More</Link>
                             </ListItem>
 
                         </List>

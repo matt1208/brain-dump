@@ -2,6 +2,8 @@ import NavBar from '@/components/NavBar';
 import { ArrowForwardIcon, SunIcon } from '@chakra-ui/icons';
 import { Alert, AlertIcon, Box, Button, Center, Circle, Container, Flex, Heading, HStack, IconButton, Image, Link, List, ListIcon, ListItem, SimpleGrid, Stack, Text, useColorMode, useColorModeValue, useMediaQuery, VStack } from '@chakra-ui/react'
 import Head from 'next/head';
+import { useRouter } from 'next/router'
+
 
 
 const AboutList = () => {
@@ -14,6 +16,7 @@ const AboutList = () => {
     const [isLargerThan1100] = useMediaQuery("(max-width: 1100px)");
     const [isLargerThan950] = useMediaQuery("(max-width: 950px)");
     const [isLargerThan1075] = useMediaQuery("(max-width: 1075px)");
+    const router = useRouter()
 
     return (
         <>
@@ -47,7 +50,7 @@ const AboutList = () => {
 
                 <ListItem color={color}>
                     <ListIcon boxSize="20px" as={ArrowForwardIcon} color={pcolor} />
-                                BrainDUMP believes privacy is a top priority, which is why we keep all thoughts private and we will not sell your data. Visit our <Link fontWeight="semibold">Privacy</Link> page for more information.
+                                BrainDUMP believes privacy is a top priority, which is why we keep all thoughts private and we will not sell your data. Visit our <Link onClick={() => router.push('/privacy')} fontWeight="semibold">Privacy</Link> page for more information.
                             </ListItem>
 
                 <ListItem color={color}>

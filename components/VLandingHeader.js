@@ -11,14 +11,24 @@ const VLandingHeader = () => {
     const boxbg = useColorModeValue("gray.200", "gray.700");
     const router = useRouter()
     const auth = useAuth();
-
+    const [isLargerThan700] = useMediaQuery("(max-width: 700px)");
 
 
     return (
         <Box borderLeft="3px solid" borderColor={btnbg} pl={4} mx={8}>
             <HStack pt={6}>
-                <Heading size="4xl" color={color}>Brain</Heading>
-                <Heading size="4xl" color={pcolor}>DUMP</Heading>
+                {isLargerThan700 ? (
+                    <>
+                        <Heading size="3xl" color={color}>Brain</Heading>
+                        <Heading size="3xl" color={pcolor}>DUMP</Heading>
+                    </>
+                ) : (
+                    <>
+                        <Heading size="4xl" color={color}>Brain</Heading>
+                        <Heading size="4xl" color={pcolor}>DUMP</Heading>
+                    </>
+                )
+                }
             </HStack>
             <Text color={color} fontSize="xl" pt="4" fontWeight="bold">A place to quickly store your random thoughts, ideas, and more. Sign in and write down your thoughts so you can remember them later.</Text>
             {/* <Button mt="6" backgroundColor={btnbg} size="lg" width="175px" height="50px" _hover={{ bg: "#A0AEC0" }} onClick={() => router.push('/signin')} >Get Started</Button> */}
@@ -35,19 +45,19 @@ const VLandingHeader = () => {
                     Go to Dash
                 </Button>
             ) : (
-                    <Button
-                        mt="6"
-                        backgroundColor={btnbg}
-                        color={btncolor}
-                        size="lg"
-                        width="175px"
-                        height="50px"
-                        _hover={{ bg: "#3CD7F6" }}
-                        onClick={() => router.push('/signin')}
-                    >
-                        Get Started
-                    </Button>
-                )}
+                <Button
+                    mt="6"
+                    backgroundColor={btnbg}
+                    color={btncolor}
+                    size="lg"
+                    width="175px"
+                    height="50px"
+                    _hover={{ bg: "#3CD7F6" }}
+                    onClick={() => router.push('/signin')}
+                >
+                    Get Started
+                </Button>
+            )}
         </Box>
     )
 }

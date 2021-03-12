@@ -29,7 +29,7 @@ const FooterV = () => {
             <Flex alignItems="center">
                 <Stack
                     isInline
-                    spacing={4}
+                    spacing={2}
                     alignItems="stretch"
                 >
                     <Link onClick={() => router.push('/signin')} fontSize="16px" opacity="75%" fontWeight="semibold" color={color}>Sign In</Link>

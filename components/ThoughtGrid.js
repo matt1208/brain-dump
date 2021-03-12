@@ -10,7 +10,7 @@ const ThoughtGrid = ({ sites }) => {
     const boxbg = useColorModeValue("gray.200", "gray.700");
 
     return (
-        <SimpleGrid columns={3} spacing={10}>
+        <SimpleGrid columns={[1, null, 3]} spacing={10}>
             {sites.map((site) => (
                 <Box bg={boxbg} p={4} borderRadius="10px">
                     <Heading pb={2} size="lg" color={color}>{site.title}</Heading>

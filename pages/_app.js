@@ -2,6 +2,8 @@ import { ChakraProvider, CSSReset, extendTheme } from '@chakra-ui/react';
 import { Global, css } from '@emotion/react';
 import { Fonts } from "@/styles/Fonts";
 import { AuthProvider } from '../lib/auth';
+import { DefaultSeo } from 'next-seo';
+import SEO from 'next-seo-config';
 
 
 
@@ -38,6 +40,7 @@ function MyApp({ Component, pageProps }) {
     <ChakraProvider theme={theme}>
       <AuthProvider>
         <Fonts />
+        <DefaultSeo {...SEO} />
         <Component {...pageProps} />
       </AuthProvider>
     </ChakraProvider>

@@ -40,9 +40,6 @@ const Shell = ({ children }) => {
 
                         {children}
 
-                        <Text mt={4}> Hey {auth?.user ? auth.user.email : 'None'}</Text>
-
-
                     </Flex>
                 ) : (
                     <Flex
@@ -56,7 +53,7 @@ const Shell = ({ children }) => {
                         {children}
 
 
-                        <Text mt={4}> Hey {auth?.user ? auth.user.email : 'None'}</Text>
+                        {/* <Text mt={4}> Hey {auth?.user ? auth.user.name : 'None'}</Text> */}
                     </Flex>
                 )
                 }

@@ -19,8 +19,8 @@ const LandingHeader = () => {
 
             <Box borderLeft="3px solid" borderColor={btnbg} pl={4}>
                 <HStack pt={6}>
-                    <Heading size="4xl" color={color}>Brain</Heading>
-                    <Heading size="4xl" color={pcolor}>DUMP</Heading>
+                    <Heading size="3xl" color={color}>Brain</Heading>
+                    <Heading size="3xl" color={pcolor}>DUMP</Heading>
                 </HStack>
                 <Text color={color} fontSize="xl" pt="4" fontWeight="bold">A place to quickly store your random thoughts, ideas, and more. Sign in and write down your thoughts so you can remember them later.</Text>
                 {auth?.user ? (
@@ -56,7 +56,7 @@ const LandingHeader = () => {
                     <Image src="LandingGraphic.svg" alt="Person surrounded with notifications graphic" />
                 </Box>
             ) : (
-                <Box boxSize="400px">
+                <Box boxSize="350px">
                     <Image src="LandingGraphic.svg" alt="Person surrounded with notifications graphic" />
                 </Box>
             )

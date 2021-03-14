@@ -36,19 +36,19 @@ const LandingHeader = () => {
                         Go to Dash
                     </Button>
                 ) : (
-                        <Button
-                            mt="6"
-                            backgroundColor={btnbg}
-                            color={btncolor}
-                            size="lg"
-                            width="175px"
-                            height="50px"
-                            _hover={{ bg: "#3CD7F6" }}
-                            onClick={() => router.push('/signin')}
-                        >
-                            Get Started
-                        </Button>
-                    )}
+                    <Button
+                        mt="6"
+                        backgroundColor={btnbg}
+                        color={btncolor}
+                        size="lg"
+                        width="175px"
+                        height="50px"
+                        _hover={{ bg: "#3CD7F6" }}
+                        onClick={() => router.push('/signin')}
+                    >
+                        Get Started
+                    </Button>
+                )}
             </Box>
 
             {isLargerThan1100 ? (
@@ -56,10 +56,10 @@ const LandingHeader = () => {
                     <Image src="LandingGraphic.svg" alt="Person surrounded with notifications graphic" />
                 </Box>
             ) : (
-                    <Box boxSize="400px">
-                        <Image src="LandingGraphic.svg" alt="Person surrounded with notifications graphic" />
-                    </Box>
-                )
+                <Box boxSize="400px">
+                    <Image src="LandingGraphic.svg" alt="Person surrounded with notifications graphic" />
+                </Box>
+            )
             }
         </SimpleGrid>
     )

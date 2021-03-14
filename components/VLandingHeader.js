@@ -17,21 +17,10 @@ const VLandingHeader = () => {
     return (
         <Box borderLeft="3px solid" borderColor={btnbg} pl={4} mx={8}>
             <HStack pt={6}>
-                {isLargerThan700 ? (
-                    <>
-                        <Heading size="3xl" color={color}>Brain</Heading>
-                        <Heading size="3xl" color={pcolor}>DUMP</Heading>
-                    </>
-                ) : (
-                    <>
-                        <Heading size="4xl" color={color}>Brain</Heading>
-                        <Heading size="4xl" color={pcolor}>DUMP</Heading>
-                    </>
-                )
-                }
+                <Heading size="4xl" color={color}>Brain</Heading>
+                <Heading size="4xl" color={pcolor}>DUMP</Heading>
             </HStack>
             <Text color={color} fontSize="xl" pt="4" fontWeight="bold">A place to quickly store your random thoughts, ideas, and more. Sign in and write down your thoughts so you can remember them later.</Text>
-            {/* <Button mt="6" backgroundColor={btnbg} size="lg" width="175px" height="50px" _hover={{ bg: "#A0AEC0" }} onClick={() => router.push('/signin')} >Get Started</Button> */}
             {auth?.user ? (
                 <Button
                     onClick={() => router.push('/dash')}

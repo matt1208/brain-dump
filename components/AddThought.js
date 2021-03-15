@@ -103,7 +103,7 @@ const AddThought = () => {
 
                         <FormControl mt={4}>
                             <FormLabel color={color}>Thought</FormLabel>
-                            <Textarea placeholder="Whats on your mind..." name="thought"
+                            <Textarea placeholder="What's on your mind..." name="thought"
                                 ref={register({
                                     required: "Required",
                                 })} />
@@ -115,7 +115,7 @@ const AddThought = () => {
                                 ref={register({
                                     required: "Required",
                                 })} >
-                                <option>Imporant</option>
+                                <option>Important</option>
                                 <option>Idea</option>
                                 <option>Note</option>
                                 <option>Random</option>

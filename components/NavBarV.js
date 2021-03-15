@@ -49,11 +49,25 @@ const NavBarV = () => {
                     </>
 
                 ) : (
+                    <>
+                        <Button
+                            onClick={() => router.push('/signin')}
+                            variant="solid"
+                            backgroundColor={btnbg}
+                            color={btncolor}
+                            size="lg"
+                            mr={4}
+                            height="50px"
+                            _hover={{ bg: "#3CD7F6" }}
+                        >
+                            Sign In
+                </Button>
                         <IconButton aria-label="Search database" icon={<SunIcon />} size="lg" onClick={toggleColorMode}>
                             Theme
-                        </IconButton>
+                </IconButton>
+                    </>
 
-                    )}
+                )}
             </Flex>
         </Flex >
     )

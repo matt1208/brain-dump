@@ -10,6 +10,7 @@ const VLandingGraphic = () => {
     return (
         <Center>
             <SimpleGrid columns={[1, null, 3]} spacing={10} ml={20} mr={20} mt={10}>
+
                 <VStack>
                     <Circle size="250px" bg={boxbg}>
                         <Image src="GlowBrain.svg" alt="Glowing Brain"></Image>
@@ -33,9 +34,10 @@ const VLandingGraphic = () => {
                     <Heading pt={2} color={color} fontSize="xl" letterSpacing={1}>All Done!</Heading>
                     <Text color={color} textAlign="center">Now that you have stored your thought, you can come back at any time to reference or remember what you were thinking.</Text>
                 </VStack>
+
             </SimpleGrid>
         </Center>
     )
 }
 
-export default VLandingGraphic
+export default VLandingGraphic;

@@ -5,16 +5,16 @@ const description = 'A place to quickly store your random thoughts, ideas, and m
 const SEO = {
     title,
     description,
-    canonical: 'https://feedback-course.vercel.app/',
+    canonical: 'https://brain-dump-git-test-branch-dev-matt1208.vercel.app/',
     openGraph: {
         type: 'website',
         locale: 'en_IE',
-        url: 'https://feedback-course.vercel.app/',
+        url: 'https://brain-dump-git-test-branch-dev-matt1208.vercel.app',
         title,
         description,
         images: [
             {
-                url: 'https://feedback-course.vercel.app/brand.png',
+                url: 'https://brain-dump-git-test-branch-dev-matt1208.vercel.app/brand.png',
                 alt: title,
                 width: 1280,
                 height: 720

@@ -14,7 +14,7 @@ const SEO = {
         description,
         images: [
             {
-                url: 'https://brain-dump-git-main-matt1208.vercel.app//brand.png',
+                url: 'https://brain-dump-git-main-matt1208.vercel.app/brand.png',
                 alt: title,
                 width: 1280,
                 height: 720

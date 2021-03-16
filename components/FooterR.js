@@ -32,9 +32,9 @@ const FooterR = () => {
                     spacing={4}
                     alignItems="stretch"
                 >
-                    <Link href="/signin" fontSize="16px" opacity="75%" fontWeight="semibold" color={color}>Sign In</Link>
-                    <Link href="/privacy" fontSize="16px" opacity="75%" fontWeight="semibold" color={color}>Privacy</Link>
-                    <Link href="/about" fontSize="16px" opacity="75%" fontWeight="semibold" color={color}>About</Link>
+                    <Link onClick={() => router.push('/signin')} fontSize="16px" opacity="75%" fontWeight="semibold" color={color}>Sign In</Link>
+                    <Link onClick={() => router.push('/privacy')} fontSize="16px" opacity="75%" fontWeight="semibold" color={color}>Privacy</Link>
+                    <Link onClick={() => router.push('/about')} fontSize="16px" opacity="75%" fontWeight="semibold" color={color}>About</Link>
                 </Stack>
             </Flex>
         </Flex >

@@ -16,7 +16,6 @@ import {
     Textarea,
     Box
 } from "@chakra-ui/react";
-import Head from 'next/head'
 import useSWR from 'swr';
 import { useRef } from 'react';
 import { useForm } from "react-hook-form";

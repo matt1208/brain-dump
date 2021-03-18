@@ -22,10 +22,14 @@ import {
     Text,
     Alert,
     AlertIcon,
-    Textarea
+    Textarea,
+    Link,
+    IconButton
 } from "@chakra-ui/react";
 import { useAuth } from '@/lib/auth';
+import { useRouter } from 'next/router'
 import { createThought } from '@/lib/db';
+import { ExternalLinkIcon } from '@chakra-ui/icons';
 
 const AddThought = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -59,7 +63,6 @@ const AddThought = () => {
         );
         onClose();
 
-
     };
     //Colors 
 
@@ -69,6 +72,8 @@ const AddThought = () => {
     const btnbg = useColorModeValue("cyan.300", "cyan.400");
     const btncolor = useColorModeValue("gray.700", "white");
     const boxbg = useColorModeValue("gray.200", "gray.700");
+    const router = useRouter();
+
 
     return (
         <>
@@ -89,7 +94,7 @@ const AddThought = () => {
             >
                 <ModalOverlay />
                 <ModalContent as="form" onSubmit={handleSubmit(onCreateThought)}>
-                    <ModalHeader fontWeight="bold" color={color}>Add Your Thought</ModalHeader>
+                    <ModalHeader fontWeight="bold" color={color}>Add Your Thought <IconButton variant="ghost" onClick={() => router.push('/addthought')} icon={<ExternalLinkIcon />} /></ModalHeader>
                     <ModalCloseButton />
                     <ModalBody pb={6}>
 
@@ -127,7 +132,7 @@ const AddThought = () => {
                     <ModalFooter>
                         <Button fontWeight="medium" onClick={onClose} mr={3}>Cancel</Button>
 
-                        <Button bg={btnbg} color="white" fontWeight="medium" type="submit" _hover={{ color: 'gray.700' }}>
+                        <Button bg={btnbg} color="white" fontWeight="medium" type="submit" _hover={{ bg: "#3CD7F6" }}>
                             Create
                         </Button>
 

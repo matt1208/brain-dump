@@ -56,7 +56,7 @@ const LandingHeader = () => {
                     <Image src="LandingGraphic.svg" alt="Person surrounded with notifications graphic" />
                 </Box>
             ) : (
-                <Box boxSize="350px">
+                <Box boxSize="375px">
                     <Image src="LandingGraphic.svg" alt="Person surrounded with notifications graphic" />
                 </Box>
             )

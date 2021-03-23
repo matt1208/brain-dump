@@ -1,4 +1,5 @@
 import AboutList from '@/components/AboutList';
+import Footer1 from '@/components/Footer';
 import NavBar from '@/components/NavBar';
 import { ArrowForwardIcon, SunIcon } from '@chakra-ui/icons';
 import { Alert, AlertIcon, Box, Button, Center, Circle, Container, Flex, Heading, HStack, IconButton, Image, Link, List, ListIcon, ListItem, SimpleGrid, Stack, Text, useColorMode, useColorModeValue, useMediaQuery, VStack } from '@chakra-ui/react'
@@ -63,9 +64,14 @@ const About = () => {
                     </Flex>
                 )
                 }
-
+                {/* Temp br */}
+                <br></br><br></br><br></br><br></br><br></br>
             </Flex>
 
+
+            <Flex flexDirection="column">
+                <Footer1 />
+            </Flex>
 
         </>
     )

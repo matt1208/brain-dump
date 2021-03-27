@@ -18,11 +18,11 @@ const LandingHeader = () => {
         <SimpleGrid columns={[1, null, 2]} spacing={40} ml={20} mr={20}>
 
             <Box borderLeft="3px solid" borderColor={btnbg} pl={4}>
-                <HStack pt={6}>
-                    <Heading size="3xl" color={color}>Brain</Heading>
-                    <Heading size="3xl" color={pcolor}>DUMP</Heading>
+                <HStack pt={10}>
+                    <Heading size="4xl" color={color}>Brain</Heading>
+                    <Heading size="4xl" color={pcolor}>DUMP</Heading>
                 </HStack>
-                <Text color={color} fontSize="xl" pt="4" fontWeight="bold">A place to quickly store your random thoughts, ideas, and more. Sign in and write down your thoughts so you can remember them later.</Text>
+                <Text color={color} fontSize="xl" pt="4" fontWeight="bold">Quickly write down and store your random thoughts, ideas, and more with BrainDUMP. Sign in and start remembering for later.</Text>
                 {auth?.user ? (
                     <Button
                         onClick={() => router.push('/dash')}

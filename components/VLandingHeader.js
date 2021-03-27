@@ -11,16 +11,25 @@ const VLandingHeader = () => {
     const boxbg = useColorModeValue("gray.200", "gray.700");
     const router = useRouter()
     const auth = useAuth();
-    const [isLargerThan700] = useMediaQuery("(max-width: 700px)");
+    const [isLargerThan600] = useMediaQuery("(max-width: 600px)");
 
 
     return (
         <SimpleGrid columns={1} mx={8}>
             <Box borderLeft="3px solid" borderColor={btnbg} pl={2}>
-                <HStack pt={10}>
-                    <Heading size="4xl" color={color}>Brain</Heading>
-                    <Heading size="4xl" color={pcolor}>DUMP</Heading>
-                </HStack>
+
+                {isLargerThan600 ? (
+                    <>
+                        <Heading size="4xl" color={color}>Brain</Heading>
+                        <Heading size="4xl" color={pcolor}>DUMP</Heading>
+                    </>
+                ) : (
+                    <HStack pt={10}>
+                        <Heading size="4xl" color={color}>Brain</Heading>
+                        <Heading size="4xl" color={pcolor}>DUMP</Heading>
+                    </HStack>
+                )
+                }
                 <Text color={color} fontSize="xl" pt="4" fontWeight="bold">Quickly write down and store your random thoughts, ideas, and more with BrainDUMP. Sign in and start remembering for later.</Text>
                 {auth?.user ? (
                     <Button

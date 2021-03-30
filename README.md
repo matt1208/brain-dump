@@ -1,4 +1,5 @@
-## BrainDUMP 
+## [BrainDUMP](https://braindmp.vercel.app)
+
 
 First, run the development server:
 
@@ -16,6 +17,8 @@ BrainDUMP is a platform to store your latest thoughts, project ideas, or just ra
 
 Refer back to a thought or delete something you decided to store anytime you want.
 
-## Where can I acess BrainDUMP?
+## Where can I access BrainDUMP?
 
-BrainDUMP is currently under development. A beta version of the site will be avaiable soon through signups and then we will be released publicly in the next couple of months. 
+An early version of BrainDUMP is out now! [Use BrainDUMP Now!](https://braindmp.vercel.app)
+
+New features and additions are currently under development so stay tuned for more updates! 

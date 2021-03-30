@@ -8,13 +8,19 @@ const ThoughtGrid = ({ sites }) => {
     const pcolor = useColorModeValue("pink.200", "pink.200");
     const btnbg = useColorModeValue("cyan.300", "cyan.400");
     const boxbg = useColorModeValue("gray.200", "gray.700");
+    const borderColors = {
+        'Important': 'green.400',
+        'Idea': 'teal.400',
+        'Note': 'blue.400',
+        'Random': 'pink.300',
+    }
 
     return (
         <SimpleGrid columns={[1, null, 3]} spacing={10} pb={4}>
             {sites.map((site) => (
                 <Box bg={boxbg} p={4} borderRadius="10px">
                     <Heading pb={2} size="lg" color={color}>{site.title}</Heading>
-                    <Tag border="2px solid" borderColor={pcolor} color={color}>{site.tag}</Tag>
+                    <Tag border="2px solid" borderColor={borderColors[site.tag] || pcolor} color={color}>{site.tag}</Tag>
                     <DeleteBtn siteId={site.id} />
                     <Text pt={4} color={color}>{site.thought}</Text>
                 </Box>

@@ -1,6 +1,7 @@
 import AboutList from '@/components/AboutList';
 import Footer1 from '@/components/Footer';
 import NavBar from '@/components/NavBar';
+import PrivacyLabel from '@/components/privacylabel';
 import { ArrowForwardIcon, SunIcon } from '@chakra-ui/icons';
 import { Alert, AlertIcon, AspectRatio, Box, Button, Center, Circle, Container, Flex, Heading, HStack, IconButton, Image, Link, List, ListIcon, ListItem, SimpleGrid, Stack, Text, useColorMode, useColorModeValue, useMediaQuery, VStack } from '@chakra-ui/react'
 import Head from 'next/head';
@@ -37,7 +38,8 @@ const Privacy = () => {
                     >
                         <Heading size="2xl" color={color}>Privacy</Heading>
                         <br></br>
-                        <Text fontSize="xl" color={color} fontWeight="semibold" fontStyle="italic">BrainDUMP believes privacy is a top priority. BrainDUMP is working hard to implement security and privacy steps to protect your thoughts. Please be aware that BrainDUMP is in a beta period and security mesaures are still being rolled out.</Text>
+                        {/* <Text fontSize="xl" color={color} fontWeight="semibold" fontStyle="italic">BrainDUMP believes privacy is a top priority. BrainDUMP is working hard to implement security and privacy steps to protect your thoughts. Please be aware that BrainDUMP is in a beta period and security mesaures are still being rolled out.</Text> */}
+                        <PrivacyLabel />
                         <br></br>
                         <Heading size="lg" color={color}>The Breakdown</Heading>
                         <br></br>
@@ -59,7 +61,8 @@ const Privacy = () => {
                     >
                         <Heading size="2xl" color={color}>Privacy</Heading>
                         <br></br>
-                        <Text fontSize="xl" color={color} fontWeight="semibold" fontStyle="italic">BrainDUMP believes privacy is a top priority. BrainDUMP is working hard to implement security and privacy steps to protect your thoughts. Please be aware that BrainDUMP is in a beta period and security mesaures are still being rolled out.</Text>
+                        {/* <Text fontSize="xl" color={color} fontWeight="semibold" fontStyle="italic">BrainDUMP believes privacy is a top priority. BrainDUMP is working hard to implement security and privacy steps to protect your thoughts. Please be aware that BrainDUMP is in a beta period and security mesaures are still being rolled out.</Text> */}
+                        <PrivacyLabel />
                         <br></br>
                         <Heading size="lg" color={color}>The Breakdown</Heading>
                         <br></br>

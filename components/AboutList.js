@@ -35,7 +35,7 @@ const AboutList = () => {
 
                 <ListItem color={color}>
                     <ListIcon boxSize="20px" as={ArrowForwardIcon} color={pcolor} />
-                    Tags help easily determine what your thought is at a quick glance. Imporant, Idea, Note, and Random are all of the current tag choices available that allow you to keep track of your thoughts easier.
+                    Tags help easily determine what your thought is at a quick glance. Important, Idea, Note, and Random are all of the current tag choices available that allow you to keep track of your thoughts easier.
                 </ListItem>
 
                 <Alert status="error">

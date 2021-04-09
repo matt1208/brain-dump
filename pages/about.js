@@ -37,7 +37,7 @@ const About = () => {
                     >
                         <Heading size="2xl" color={color}>About</Heading>
                         <br></br>
-                        <Text fontSize="xl" color={color} fontWeight="semibold" fontStyle="italic">BrainDUMP allows you to store all of your imporant thoughts in one place. Whether you need to quickly write down a new project idea or the next random thought that pops into your head.</Text>
+                        <Text fontSize="xl" color={color} fontWeight="semibold" fontStyle="italic">BrainDUMP allows you to store all of your important  thoughts in one place. Whether you need to quickly write down a new project idea or the next random thought that pops into your head.</Text>
                         <br></br>
                         <Heading size="lg" color={color}>The Breakdown</Heading>
                         <br></br>
@@ -55,7 +55,7 @@ const About = () => {
                     >
                         <Heading size="2xl" color={color}>About</Heading>
                         <br></br>
-                        <Text fontSize="xl" color={color} fontWeight="semibold" fontStyle="italic">BrainDUMP allows you to store all of your imporant thoughts in one place. Whether you need to quickly write down a new project idea or the next random thought that pops into your head.</Text>
+                        <Text fontSize="xl" color={color} fontWeight="semibold" fontStyle="italic">BrainDUMP allows you to store all of your important  thoughts in one place. Whether you need to quickly write down a new project idea or the next random thought that pops into your head.</Text>
                         <br></br>
                         <Heading size="lg" color={color}>The Breakdown</Heading>
                         <br></br>

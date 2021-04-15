@@ -92,7 +92,7 @@ const PrivacyCardBB = () => {
                             // fontWeight="bold"
                             fontSize="lg"
                         >
-                            Privacy is a top priority for BrainDUMP and it is important to know in simple terms exactly which information of yours BrainDUMP has. \
+                            Privacy is a top priority for BrainDUMP and it is important to know in simple terms exactly which information of yours BrainDUMP has.
                          </Text>
 
 

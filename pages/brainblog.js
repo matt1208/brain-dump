@@ -68,6 +68,7 @@ const BrainBlog = () => {
                 }
 
             </Flex>
+            <br></br>
 
             <Flex flexDirection="column">
                 <Footer1 />

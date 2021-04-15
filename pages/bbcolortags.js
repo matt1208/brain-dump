@@ -55,7 +55,7 @@ const ColorTags = () => {
                             mt={4}
                             color={color}
                         >
-                            Early in BrainDUMP’s beta testing, feedback about easier ways to differentiate thoughts was given and these new color tags are one of the steps being taken to improve the experience.
+                            Early in BrainDUMP’s beta testing, feedback about easier ways to differentiate thoughts was given and these new color tags are one of the steps being taken to improve the user experience.
                         </Text>
 
                         <Center>
@@ -86,7 +86,7 @@ const ColorTags = () => {
                             mt={4}
                             color={color}
                         >
-                            Early in BrainDUMP’s beta testing, feedback about easier ways to differentiate thoughts was given and these new color tags are one of the steps being taken to improve the experience.
+                            Early in BrainDUMP’s beta testing, feedback about easier ways to differentiate thoughts was given and these new color tags are one of the steps being taken to improve the user experience.
                         </Text>
 
                         <Center>

@@ -96,7 +96,7 @@ const FeaturedGrid = () => {
                 >
                     <Center>
                         <Circle size="200px" bg="#4A5568">
-                            <Image src="/brain.svg" boxSize="175px" ></Image>
+                            <Image src="/Privacy.png" boxSize="175px" marginBottom={2}></Image>
                         </Circle>
                     </Center>
 

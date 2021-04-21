@@ -105,7 +105,7 @@ const PrivacyCardBB = () => {
 
 
                         <Center>
-                            <Image src="/social_graphics/Privacy Card.png" alt="Privacy Card Social Graphic Annoucement" mt={8} width="500px" boxShadow="0px 5px 20px black" />
+                            <Image src="/social_graphics/Privacy Card.png" alt="Privacy Card Social Graphic Annoucement" mt={8} mb={8} width="500px" boxShadow="0px 5px 20px black" />
                         </Center>
                     </Flex>
                 )

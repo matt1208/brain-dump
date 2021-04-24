@@ -1,8 +1,8 @@
 import NavBar from '@/components/NavBar';
 import { useAuth } from '@/lib/auth';
 import { GitHubIcon, GoogleIcon } from '@/styles/Icons';
-import { SunIcon } from '@chakra-ui/icons';
-import { Box, Button, Center, extendTheme, Flex, Heading, HStack, IconButton, Image, Link, Stack, Text, useColorMode, useColorModeValue, useMediaQuery } from '@chakra-ui/react'
+import { Icon, LockIcon, SunIcon } from '@chakra-ui/icons';
+import { Box, Button, Center, extendTheme, Flex, Heading, HStack, IconButton, Image, Link, Stack, Text, useColorMode, useColorModeValue, useMediaQuery, VStack } from '@chakra-ui/react'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 
@@ -98,6 +98,18 @@ export default function Home() {
                                     >
                                         Sign In with Google
                                     </Button>
+                                    <Center>
+                                        <HStack>
+                                            <LockIcon color={color} />
+                                            <Link
+                                                fontSize="sm"
+                                                color={color}
+                                                onClick={() => router.push('/privacy')}
+                                            >
+                                                Privacy
+                                                 </Link>
+                                        </HStack>
+                                    </Center>
                                 </Stack>
                             )}
                         </Center>
@@ -113,7 +125,6 @@ export default function Home() {
                             margin="40"
                         >
                             <HStack>
-
                                 <Heading size="2xl" color={color}>Brain</Heading>
                                 <Heading size="2xl" color={pcolor}>DUMP</Heading>
                             </HStack>
@@ -161,6 +172,18 @@ export default function Home() {
                                         >
                                             Sign In with Google
                                         </Button>
+                                        <Center>
+                                            <HStack>
+                                                <LockIcon color={color} />
+                                                <Link
+                                                    fontSize="sm"
+                                                    color={color}
+                                                    onClick={() => router.push('/privacy')}
+                                                >
+                                                    Privacy
+                                                 </Link>
+                                            </HStack>
+                                        </Center>
                                     </Stack>
                                 )}
                             </Center>

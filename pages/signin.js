@@ -1,3 +1,4 @@
+import ModalPrivacy from '@/components/ModalPrivacy';
 import NavBar from '@/components/NavBar';
 import { useAuth } from '@/lib/auth';
 import { GitHubIcon, GoogleIcon } from '@/styles/Icons';
@@ -98,18 +99,7 @@ export default function Home() {
                                     >
                                         Sign In with Google
                                     </Button>
-                                    <Center>
-                                        <HStack>
-                                            <LockIcon color={color} />
-                                            <Link
-                                                fontSize="sm"
-                                                color={color}
-                                                onClick={() => router.push('/privacy')}
-                                            >
-                                                Privacy
-                                                 </Link>
-                                        </HStack>
-                                    </Center>
+                                    <ModalPrivacy />
                                 </Stack>
                             )}
                         </Center>
@@ -172,18 +162,7 @@ export default function Home() {
                                         >
                                             Sign In with Google
                                         </Button>
-                                        <Center>
-                                            <HStack>
-                                                <LockIcon color={color} />
-                                                <Link
-                                                    fontSize="sm"
-                                                    color={color}
-                                                    onClick={() => router.push('/privacy')}
-                                                >
-                                                    Privacy
-                                                 </Link>
-                                            </HStack>
-                                        </Center>
+                                        <ModalPrivacy />
                                     </Stack>
                                 )}
                             </Center>

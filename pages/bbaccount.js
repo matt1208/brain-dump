@@ -49,12 +49,17 @@ const AccountCenterRelease = () => {
                             mt={4}
                             color={color}
                         >
-                            Coming Soon
-                        </Text>
-
+                            The account center now allows users to access key tools about their profile with BrainDUMP. To access the account center, click on the new Profile Icon in the right corner, and select Account. The Profile Icon also allows users to log out of their account at any time.
+                         </Text>
+                        <Text
+                            mt={4}
+                            color={color}
+                        >
+                            The account center contains options for users to contact BrainDUMP and to also control their data. If they have any feature requests or issues while using BrainDUMP they can either Request a Feature or Report a Bug. Both of these link to our Github Issues page so we can hear directly from you. Managing your data is also easier now, by filling out a simple form we can get in contact with you to discuss the next steps. If you sadly want to delete your account with BrainDUMP that option is also now available through the account center.
+                         </Text>
 
                         <Center>
-                            <Image src="/social_graphics/Tag Color Annoucments.png" alt="Tag Color Social Graphic Annoucement" mt={8} width="500px" boxShadow="0px 5px 20px black" />
+                            <Image src="/social_graphics/Account Center.png" alt="Account Center Social Graphic Annoucement" mt={8} width="500px" boxShadow="0px 5px 20px black" />
                         </Center>
                     </Flex>
                 ) : (
@@ -75,11 +80,16 @@ const AccountCenterRelease = () => {
                             mt={4}
                             color={color}
                         >
-                            Coming Soon
+                            The account center now allows users to access key tools about their profile with BrainDUMP. To access the account center, click on the new Profile Icon in the right corner, and select Account. The Profile Icon also allows users to log out of their account at any time.
                          </Text>
-
+                        <Text
+                            mt={4}
+                            color={color}
+                        >
+                            The account center contains options for users to contact BrainDUMP and to also control their data. If they have any feature requests or issues while using BrainDUMP they can either Request a Feature or Report a Bug. Both of these link to our Github Issues page so we can hear directly from you. Managing your data is also easier now, by filling out a simple form we can get in contact with you to discuss the next steps. If you sadly want to delete your account with BrainDUMP that option is also now available through the account center.
+                         </Text>
                         <Center>
-                            <Image src="/social_graphics/Tag Color Annoucments.png" alt="Tag Color Social Graphic Annoucement" mt={8} width="500px" boxShadow="0px 5px 20px black" />
+                            <Image src="/social_graphics/Account Center.png" alt="Account Center Social Graphic Annoucement" mt={8} width="500px" boxShadow="0px 5px 20px black" />
                         </Center>
                     </Flex>
                 )

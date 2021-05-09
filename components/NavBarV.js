@@ -1,7 +1,8 @@
 import { useAuth } from '@/lib/auth';
 import { SunIcon } from '@chakra-ui/icons';
-import { Box, Button, Container, Flex, Heading, HStack, IconButton, Image, Link, SimpleGrid, Spacer, Stack, Text, useColorMode, useColorModeValue } from '@chakra-ui/react';
+import { Box, Button, Container, Flex, Heading, HStack, IconButton, Image, Menu, Link, SimpleGrid, Spacer, Stack, Text, useColorMode, useColorModeValue, MenuButton, Avatar, MenuList, MenuItem } from '@chakra-ui/react';
 import { useRouter } from 'next/router'
+import ProfileIcon from './ProfileMenu';
 
 const NavBarV = () => {
     const { toggleColorMode } = useColorMode()
@@ -12,6 +13,7 @@ const NavBarV = () => {
     const boxbg = useColorModeValue("gray.200", "gray.700");
     const router = useRouter()
     const auth = useAuth();
+    const { user } = useAuth();
 
 
     return (
@@ -31,7 +33,7 @@ const NavBarV = () => {
             <Flex alignItems="center">
                 {auth?.user ? (
                     <>
-                        <Button
+                        {/* <Button
                             onClick={(e) => auth.signout()}
                             variant="solid"
                             backgroundColor={btnbg}
@@ -42,7 +44,9 @@ const NavBarV = () => {
                             _hover={{ bg: "#3CD7F6" }}
                         >
                             Sign Out
-                        </Button>
+                        </Button>  */}
+                        <ProfileIcon />
+
                         <IconButton aria-label="Search database" icon={<SunIcon />} size="lg" onClick={toggleColorMode}>
                             Theme
                         </IconButton>

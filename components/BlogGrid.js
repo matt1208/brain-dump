@@ -24,14 +24,16 @@ const FeaturedGrid = () => {
                 pb={8}
                 height="100%"
                 style={{ cursor: "pointer" }}
-                onClick={() => router.push('/bbrelease')}
+                onClick={() => router.push('/bbaccount')}
                 _hover={{ transform: "translateY(-5px) scale(1.005) translateZ(0)" }}
             >
 
                 <SimpleGrid columns={[1, null, 2]} >
                     <Center>
-                        <Box marginLeft="10%">
-                            <Image src="/BrainBlog.svg" alt="Brain Blog icons. A brain and a piece of paper." width="300px"></Image>
+                        <Box marginLeft="0%">
+                            <Circle size="200px" bg="#4A5568">
+                                <Image mr={10} mb={4} src="/avatar.png" alt="An avatar to represent your profile picture, all to help represent our new account center." width="200px"></Image>
+                            </Circle>
                         </Box>
                     </Center>
 
@@ -42,7 +44,7 @@ const FeaturedGrid = () => {
                             textAlign="right"
                         >
                             <Text color={color} fontWeight="bold">Update</Text>
-                            <Heading size="xl" color={color}>Release of Brain Blog</Heading>
+                            <Heading size="xl" color={color}>Account Center</Heading>
                         </Box>
                     </Center>
                 </SimpleGrid>
@@ -52,6 +54,33 @@ const FeaturedGrid = () => {
             <br></br>
 
             <SimpleGrid columns={[1, null, 2]} spacing={10} pb={6} borderBottom="4px solid" borderBottomColor={boxbg}>
+                <Flex
+                    backgroundColor={boxbg}
+                    borderRadius="10px"
+                    p={4}
+                    height="300px"
+                    flexDirection="column"
+                    style={{ cursor: "pointer" }}
+                    onClick={() => router.push('/bbrelease')}
+                    _hover={{ transform: "translateY(-5px) scale(1.005) translateZ(0)" }}
+                >
+                    <Center>
+                        <Circle size="200px" bg="#4A5568">
+                            <Image src="/BrainBlog.svg" alt="Brain Blog icons. A brain and a piece of paper." width="150px"></Image>
+                        </Circle>
+                    </Center>
+
+                    <Flex
+                        flexDirection="column"
+                        marginTop="15px"
+                        // marginTop="215px"
+                        pl="2"
+                    >
+                        <Text color={color} fontWeight="bold">Update</Text>
+                        <Heading size="lg" color={color}>Brain Blog</Heading>
+                    </Flex>
+                </Flex>
+
                 <Flex
                     backgroundColor={boxbg}
                     borderRadius="10px"
@@ -81,33 +110,6 @@ const FeaturedGrid = () => {
                     >
                         <Text color={color} fontWeight="bold">Update</Text>
                         <Heading size="lg" color={color}>Color Tags</Heading>
-                    </Flex>
-                </Flex>
-
-                <Flex
-                    backgroundColor={boxbg}
-                    borderRadius="10px"
-                    p={4}
-                    height="300px"
-                    flexDirection="column"
-                    style={{ cursor: "pointer" }}
-                    onClick={() => router.push('/bbprivacycard')}
-                    _hover={{ transform: "translateY(-5px) scale(1.005) translateZ(0)" }}
-                >
-                    <Center>
-                        <Circle size="200px" bg="#4A5568">
-                            <Image src="/Privacy.png" boxSize="175px" marginBottom={2}></Image>
-                        </Circle>
-                    </Center>
-
-                    <Flex
-                        flexDirection="column"
-                        marginTop="15px"
-                        // marginTop="215px"
-                        pl="2"
-                    >
-                        <Text color={color} fontWeight="bold">Update</Text>
-                        <Heading size="lg" color={color}>Privacy Card</Heading>
                     </Flex>
                 </Flex>
             </SimpleGrid>

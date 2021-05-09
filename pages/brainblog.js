@@ -1,8 +1,8 @@
 import AboutList from '@/components/AboutList';
 import FeaturedGrid from '@/components/BlogGrid';
-import BlogGrid from '@/components/BlogGrid';
 import Footer1 from '@/components/Footer';
 import NavBar from '@/components/NavBar';
+import NewsGrid from '@/components/NewsGrid';
 import { ArrowForwardIcon, SunIcon } from '@chakra-ui/icons';
 import { Alert, AlertIcon, AspectRatio, Box, Button, Center, Circle, Container, Divider, Flex, Heading, HStack, IconButton, Image, Link, List, ListIcon, ListItem, SimpleGrid, Stack, Text, useColorMode, useColorModeValue, useMediaQuery, VStack } from '@chakra-ui/react'
 import Head from 'next/head';
@@ -42,8 +42,10 @@ const BrainBlog = () => {
                         <FeaturedGrid />
 
                         <br></br>
-                        {/* <Heading size="xl" color={color}>More From Brain Blog</Heading>
-                        <br></br> */}
+                        <Heading size="xl" color={color}>More From Brain Blog</Heading>
+                        <br></br>
+                        <NewsGrid />
+                        <br></br>
 
 
 
@@ -60,8 +62,10 @@ const BrainBlog = () => {
                         <br></br>
                         <FeaturedGrid />
                         <br></br>
-                        {/* <Heading size="xl" color={color}>More From Brain Blog</Heading>
-                        <br></br> */}
+                        <Heading size="xl" color={color}>More From Brain Blog</Heading>
+                        <br></br>
+                        <NewsGrid />
+                        <br></br>
 
                     </Flex>
                 )

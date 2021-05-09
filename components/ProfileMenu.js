@@ -24,6 +24,7 @@ const ProfileIcon = () => {
             <MenuButton height="50px" bg={boxbg} mr={4} src={user?.photoUrl} as={Avatar} />
 
             <MenuList>
+                <MenuItem color={color} onClick={() => router.push('/dash')}>Thoughts</MenuItem>
                 <MenuItem color={color} onClick={() => router.push('/account')}>Account</MenuItem>
                 <MenuDivider />
                 <MenuItem color={color} onClick={(e) => auth.signout()}>Logout</MenuItem>

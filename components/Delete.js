@@ -71,11 +71,11 @@ const DeleteBtn = ({ siteId }) => {
                         Are you sure? You can't undo this action afterwards.
                     </AlertDialogBody>
                     <AlertDialogFooter>
-                        <Button ref={cancelRef} onClick={onClose}>
+                        <Button ref={cancelRef} onClick={onClose} fontWeight="normal">
                             Cancel
                          </Button>
                         <Button
-                            fontWeight="bold"
+                            fontWeight="normal"
                             colorScheme="red"
                             onClick={onDelete}
                             ml={3}

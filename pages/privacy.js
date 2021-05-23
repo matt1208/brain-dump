@@ -21,7 +21,7 @@ const Privacy = () => {
     return (
         <>
             <Head>
-                <title>Brain Dump</title>
+                <title>BrainDUMP | Privacy</title>
             </Head>
 
             <Flex flexDirection="column">

@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Brain Dump</title>
+        <title>BrainDUMP</title>
       </Head>
 
       <Flex flexDirection="column">

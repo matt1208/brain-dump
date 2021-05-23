@@ -20,7 +20,7 @@ const About = () => {
     return (
         <>
             <Head>
-                <title>Brain Dump</title>
+                <title>BrainDUMP | About</title>
             </Head>
 
             <Flex flexDirection="column">

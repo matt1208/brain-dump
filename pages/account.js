@@ -25,13 +25,10 @@ const Account = () => {
     return (
         <>
             <Head>
-                <title>Brain Dump</title>
+                <title>BrainDUMP | Account</title>
             </Head>
 
             <>
-                <Head>
-                    <title>Brain Dump</title>
-                </Head>
 
                 <Flex flexDirection="column">
                     <NavBar />

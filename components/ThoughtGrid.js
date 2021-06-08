@@ -12,6 +12,7 @@ const ThoughtGrid = ({ sites }) => {
         'Important': 'green.400',
         'Idea': 'teal.400',
         'Note': 'blue.400',
+        'To Do': 'purple.400',
         'Random': 'pink.300',
     }
 

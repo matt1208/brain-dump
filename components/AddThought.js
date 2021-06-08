@@ -124,6 +124,7 @@ const AddThought = () => {
                                 <option>Important</option>
                                 <option>Idea</option>
                                 <option>Note</option>
+                                <option>To Do</option>
                                 <option>Random</option>
                             </Select>
                         </FormControl>

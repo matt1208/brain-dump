@@ -31,7 +31,7 @@ const AccountShell = () => {
                                 fontWeight="bold"
                                 color={color}
                             >
-                                Dash
+                                Thoughts
                              </BreadcrumbLink>
                         </BreadcrumbItem>
                     </Breadcrumb>

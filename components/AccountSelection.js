@@ -1,5 +1,5 @@
 import { useAuth } from '@/lib/auth';
-import { Avatar, Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Center, Circle, Container, Flex, Heading, HStack, IconButton, Image, Link, SimpleGrid, Stack, Text, useColorMode, useColorModeValue, useMediaQuery, VStack, Wrap, WrapItem } from '@chakra-ui/react'
+import { Avatar, Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Center, Circle, Container, Flex, Heading, HStack, IconButton, Image, Link, SimpleGrid, Stack, Text, useColorMode, useColorModeValue, useMediaQuery, VStack, Wrap, WrapItem, useToast } from '@chakra-ui/react'
 import { useRouter } from 'next/router';
 
 const SelectionList = () => {
@@ -13,6 +13,8 @@ const SelectionList = () => {
     const router = useRouter()
     const auth = useAuth();
     const { user } = useAuth();
+    const toast = useToast()
+
 
 
     return (
@@ -107,7 +109,7 @@ const SelectionList = () => {
                 >
 
                     BrainDUMP wants you to be in control of your data.
-                  </Text>
+                </Text>
                 {isLargerThan950 ? (
                     <Button
                         variant="solid"
@@ -155,8 +157,14 @@ const SelectionList = () => {
                     size="md"
                     height="50px"
                     width="150px"
-                    onClick={() => router.push('https://airtable.com/shrBrxzUocD92e1sW')}
-                    _hover={{ bg: "#FC8181" }}
+                    onClick={() =>
+                        toast({
+                            title: "Feature Not Available",
+                            status: "error",
+                            duration: 3000,
+                            isClosable: true,
+                        })
+                    } _hover={{ bg: "#FC8181" }}
                 >
                     Delete Account
                 </Button>
